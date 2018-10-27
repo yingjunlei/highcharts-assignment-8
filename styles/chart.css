@@ -1,0 +1,53 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", "Arial", sans-serif;
+    background: #D3D3D3;
+    color: #333;
+    margin: 0;
+}
+title, h1, h2 {
+    font-family: "Merriweather", "Georgia", serif;
+    margin:0;
+    text-align: center;
+    padding-top: 30px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: #fff;
+  padding: 20px;
+
+}
+
+p {
+  align-items: center;
+}
+
+#byline {
+  text-align: center;
+  font-size: 175%
+
+}
+
+
+#container {
+    max-width: 100%;
+    margin: auto;
+    align-items: center;
+
+}
+#container2 {
+  max-width: 100%;
+  margin: auto;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px){
+
+}

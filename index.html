@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Undergraduate Enrollment Rates and Population Growth </title>
+  <link rel="stylesheet" href="styles/chart.css">
+<link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans" rel="stylesheet">
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/themes/avocado.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+</head>
+
+<header>
+  <h1> Undergraduate Enrollment Rates and Average annual rate of population change  </h1>
+  <p id="byline">Ying Lei</p>
+
+</header>
+
+<body>
+  <article>
+    <div id="container" style="width:100%; height:500px;">
+      <script>
+      Highcharts.chart('container', {
+        chart: {
+          type: 'bar'
+        },
+        title: {
+          text: 'Undergraduate Enrollment Rate by Sex in the U.S.'
+        },
+        subtitle: {
+          text: 'Source: <a href="https://nces.ed.gov/programs/digest/d13/tables/dt13_303.70.asp">nces.edu.gov</a>'
+        },
+        xAxis: {
+          categories: ['1980', '1981', '1982', '1983', '1984'],
+          title: {
+            text: 'Year'
+          }
+        },
+        yAxis: {
+          min: 3000000,
+          max: 6000000,
+          title: {
+            text: 'Number of Undergraduate Enrollments',
+            align: 'high'
+          },
+        },
+
+        plotOptions: {
+          bar: {
+            dataLabels: {
+              enabled: true
+            }
+          }
+        },
+        legend: {
+          layout: 'horizontal',
+          align: 'center',
+          verticalAlign: 'bottom',
+
+        },
+
+        series: [{
+          name: '# of Males',
+          data: [5000177, 5108241, 5170494, 5158300, 5006813]
+        }, {
+          name: '# of Females',
+          data: [5474878, 5646251, 5646251, 5687695, 5611258]
+        }]
+      });
+      </script>
+    </div>
+
+    <p class="sources">Source: National Center for Education Statistics, <a href="https://nces.ed.gov/programs/digest/d13/tables/dt13_303.70.asp">
+Table 303.70. </a> </p>
+    <p> This data describes the rate of  total undergraduate fall enrollment in degree-granting postsecondary institutions from 1980 to 1985. Both full-time and part-time are included and separated by  the sex of student.Starting in 1980, 2-year institutions include schools accredited by the Accrediting Commission of Career Schools and Colleges of Technology.
+ </p>
+
+  <div id="container2" style="width:100%; height:500px;">
+       <script>
+ Highcharts.chart('container2', {
+
+     title: {
+         text: 'Average annual rate of population change (percentage)'
+     },
+
+     subtitle: {
+       text: 'Source: <a href="http://data.un.org/Data.aspx?q=population&d=PopDiv&f=variableID%3a47">data.un.org</a>'
+     },
+
+     yAxis: {
+         title: {
+             text: 'Percentage Change in Population'
+         }
+     },
+
+     xAxis: {
+         title: {
+             text: 'Year'
+         }
+     },
+
+     legend: {
+         layout: 'vertical',
+         align: 'right',
+         verticalAlign: 'middle'
+     },
+
+     plotOptions: {
+         series: {
+             label: {
+                 connectorAllowed: false
+             },
+             pointStart: 1955,
+             pointInterval: 5
+         }
+     },
+
+     series: [{
+         name: 'Afghanistan',
+         data: [1.295, 1.682, 1.992, 2.258, 2.473, 1.019, -2.344, 0.776, 6.672, 3.227, 4.426, 2.776, 3.162, 2.409]
+
+ },
+
+ {
+         name: 'Somalia',
+         data: [1.914, 2.017, 2.148, 2.313, 2.382, 9.880, 1.316, 1.708, 0.815, 3.133, 2.885, 2.931, 2.863, 2.933]
+
+ }],
+
+     responsive: {
+         rules: [{
+             condition: {
+                 maxWidth: 500
+             },
+             chartOptions: {
+                 legend: {
+                     layout: 'horizontal',
+                     align: 'center',
+                     verticalAlign: 'bottom'
+                 }
+             }
+         }]
+     }
+
+ });
+       </script>
+     </div>
+<p class="sources">Source: United Nations Population Division, <a href="http://data.un.org/Data.aspx?q=population&d=PopDiv&f=variableID%3a47"> World Population Prospects: The 2017 Revision</a> </p>
+
+<p> This chart describes the population change in percentage from 1955 to 2020 (projected) of Somalia and Afghanistan. This 2017 Revision of World Population Prospects represents the most recent global set of demographic projections prepared by the Population Division of the Department of Economic and Social Affairs of the United Nations Secretariat. The sudden dip in population in 1985 in Somalia can be explained by Somali’s dispute with Ethiopia; Somalia dissidents with Ethiopian air support invaded Somalia in the center, threatening to split the country in two. In the case of Afghanistan, the Soviet–Afghan War plagued the country  from 1979 to 1989.</p>
+
+</article>
+
+</body>
+</html>
